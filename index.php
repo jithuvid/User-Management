@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "myshop";
+$database = "User-Management";
 
 // Create connection
 $connection = new mysqli($servername, $username, $password, $database);
@@ -33,7 +33,7 @@ if (!$result) {
 <body>
 <div class="container my-5">
       <h2>List of Clients</h2>
-      <a class="btn btn-primary" href="/myshop/create.php" role="button">New Client</a>
+      <a class="btn btn-primary" href="/User-Management/create.php" role="button">New Client</a>
       <br>
     <div class="container my-5">
         <h2>Clients</h2>
@@ -61,8 +61,8 @@ if (!$result) {
                         <td>{$row['address']}</td>
                         <td>{$row['created_at']}</td>
                         <td>
-                            <a class='btn btn-primary btn-sm' href='/myshop/edit.php?id={$row['id']}'>Edit</a>
-                            <a class='btn btn-danger btn-sm' href='/myshop/delete.php?id={$row['id']}'>Delete</a>
+                            <a class='btn btn-primary btn-sm' href='/User-Management/edit.php?id={$row['id']}'>Edit</a>
+                            <a class='btn btn-danger btn-sm' href='/User-Management/delete.php?id={$row['id']}'>Delete</a>
                         </td>
                     </tr>
                     ";

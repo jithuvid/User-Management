@@ -2,7 +2,7 @@
 $servername ="localhost";
 $username ="root";
 $password ="";
-$database ="myshop";
+$database ="User-Management";
 
 //Create connection
 $connection = new mysqli($servername, $username, $password, $database);
@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] =='GET'){
     //Get method: show the data of the client
 
     if(!isset($_GET["id"])){
-       header("location:/myshop/index.php");
+       header("location:/User-Management/index.php");
        exit;
     }
 
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] =='GET'){
     $row= $result->fetch_assoc();
 
     if(!$row){
-        header("location: /myshop/index.php");
+        header("location: /User-Management/index.php");
         exit;
     }
 
@@ -69,7 +69,7 @@ else{
 
         $successMessage ="Client updated correctly";
 
-        header("location:/myshop/index.php");
+        header("location:/User-Management/index.php");
         exit;
       } while(true);
 }
@@ -148,7 +148,7 @@ else{
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d grid">
-                    <a class="btn btn-outline-primary" href="/myshop/index.php"role="button">Cancel</a>
+                    <a class="btn btn-outline-primary" href="/User-Management/index.php"role="button">Cancel</a>
                 </div>
         </form>
 

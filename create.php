@@ -2,7 +2,7 @@
  $servername ="localhost";
  $username ="root";
  $password ="";
- $database ="myshop";
+ $database ="User-Management";
 
  //Create connection
  $connection = new mysqli($servername, $username, $password, $database);
@@ -42,7 +42,7 @@
         $address="";
 
         $successMessage="Client added correctly";
-        header("location: /myshop/index.php");
+        header("location: /User-Management/index.php");
         exit;
 
     } while(false);
@@ -121,7 +121,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d grid">
-                    <a class="btn btn-outline-primary" href="/myshop/index.php"role="button">Cancel</a>
+                    <a class="btn btn-outline-primary" href="/User-Management/index.php"role="button">Cancel</a>
                 </div>
         </form>
 
